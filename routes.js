@@ -15,6 +15,8 @@ module.exports.router = (app) => {
     res.redirect('/#/tickets');
   });
 
+  //app.get('/signin', (req, res) => {res.redirect('/signin');});
+
   app.get('/tickets', helpers.isLoggedIn, helpers.getTickets);
 
   app.post('/tickets', helpers.isLoggedIn, helpers.addToQueue);
@@ -23,6 +25,6 @@ module.exports.router = (app) => {
 
   app.put('/solved', helpers.isLoggedIn, helpers.tagSolved);
 
-  app.get('/signout', helpers.isLoggedIn, helpers.terminateSession)
+  app.get('/signout', helpers.isLoggedIn, helpers.terminateSession);
 
 };

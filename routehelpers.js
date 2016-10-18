@@ -11,9 +11,12 @@ var tickets = [
 module.exports = {
 
   isLoggedIn: (req, res, next) => {
-    if(req.session && req.session.passport.user.username && req.session.passport.user.provider === 'github'){
+    console.log('IN TIX');
+    if(req.session.passport && req.session.passport.user.username && req.session.passport.user.provider === 'github'){
+      console.log('PASSED')
       next();
     } else {
+      console.log('REDIRECT')
       res.redirect('/auth/github');
     }
   },
@@ -46,7 +49,7 @@ module.exports = {
     IDcount++;
 
     res.json(tickets);
-  
+
   },
 
   tagClaimed: (req, res) => {
