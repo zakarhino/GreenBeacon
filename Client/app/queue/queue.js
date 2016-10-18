@@ -18,7 +18,6 @@ angular.module('app.queue', [])
       })
   }
 
-<<<<<<< e55f98b4b2fb47f1dea7473eaf68b793b5e9e160
 $scope.ticket = {};
   $scope.addTicket = function () {
     console.log('inside addTicket module ', $scope.ticket)
@@ -32,8 +31,6 @@ $scope.ticket = {};
     });
   }
 
-=======
->>>>>>> [FIX] Work on proper auth and redirect handling
   initializeQueue();
 
 }])
