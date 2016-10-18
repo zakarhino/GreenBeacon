@@ -17,7 +17,7 @@ module.exports = {
       next();
     } else {
       console.log('REDIRECT')
-      res.redirect('/#/signin');
+      res.redirect('/auth/github');
     }
   },
 
